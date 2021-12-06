@@ -2,6 +2,7 @@ name: "GitHub CD Experiment"
 on:
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 jobs:
   starter:
     runs-on: ubuntu:latest
