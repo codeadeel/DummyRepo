@@ -7,8 +7,12 @@ jobs:
   printer:
     runs-on: ubuntu-latest
     steps:
+      - name: Checking Out
+        uses: actions/checkout@v2.4.0
       - name: name printer
         run: echo Hello from GitHub!
+      - name: Listing Files
+        run: ls -lah
 
 # # This is a basic workflow to help you get started with Actions
 
