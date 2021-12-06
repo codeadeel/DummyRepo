@@ -13,6 +13,8 @@ jobs:
         run: echo Hello from GitHub!
       - name: Listing Files
         run: ls -lah
+      - name: Check YAML File
+        run: cat ./.github/workflows/main.yml
 
 # # This is a basic workflow to help you get started with Actions
 
