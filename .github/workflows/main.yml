@@ -5,10 +5,10 @@ on:
   workflow_dispatch:
 jobs:
   starter:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: Printing Your Name
-      run: echo Hello Adeel!
+        run: echo Hello Adeel
 
 
 # # This is a basic workflow to help you get started with Actions
