@@ -1,4 +1,4 @@
 # DummyRepo
 Its a dummy repository for self experimentation
 
-This file is on new dummy branch
+A new commit on dummy branch.
