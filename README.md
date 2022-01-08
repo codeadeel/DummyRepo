@@ -1,4 +1,4 @@
 # DummyRepo
 Its a dummy repository for self experimentation
 
-here is some more changed changed dummy text.
+here I am trying to commit from my local machine.
