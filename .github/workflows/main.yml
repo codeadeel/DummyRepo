@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   printer:
-    runs-on: hola-runner
+    runs-on: self-hosted
     steps:
       - name: Checking Out
         uses: actions/checkout@v2.4.0
