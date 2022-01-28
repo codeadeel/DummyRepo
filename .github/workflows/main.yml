@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   printer:
-    runs-on: ubuntu-latest
+    runs-on: hola-runner
     steps:
       - name: Checking Out
         uses: actions/checkout@v2.4.0
