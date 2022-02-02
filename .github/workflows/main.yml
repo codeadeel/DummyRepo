@@ -16,7 +16,7 @@ jobs:
       - name: Check YAML File
         run: cat ./.github/workflows/main.yml
       - name: Run Script
-        run: python3 ./hello.py
+        run: python3 ./hello.py &
       - name: Check PID
         run: ps
 
