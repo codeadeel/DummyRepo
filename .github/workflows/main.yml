@@ -16,7 +16,7 @@ jobs:
       - name: Check YAML File
         run: cat ./.github/workflows/main.yml
       - name: Run Script
-        run: RUNNER_TRACKING_ID="" && bash -c "python3 ./hello.py" &
+        run: RUNNER_TRACKING_ID="" && bash -c "nohup python3 ./hello.py" &
       - name: Check PID
         run: ps
 
