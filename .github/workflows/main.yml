@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checking Out
         uses: actions/checkout@v2.4.0
+      - name: Check Tracker ID Before
+        run: echo $RUNNER_TRACKING_ID
       - name: name printer
         run: echo Hello from GitHub!
       - name: Listing Files
@@ -19,7 +21,7 @@ jobs:
         run: python3 ./hello.py &
       - name: Check PID
         run: ps
-      - name: Check Tracker ID
+      - name: Check Tracker ID After
         run: echo $RUNNER_TRACKING_ID
 
 # # This is a basic workflow to help you get started with Actions
