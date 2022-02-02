@@ -2,6 +2,6 @@
 
 import time
 
-for i in range(1000):
+for i in range(60):
   print("Hello from GitHub")
   time.sleep(1)
