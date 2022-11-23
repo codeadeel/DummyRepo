@@ -1,24 +1,24 @@
-name: "CD Experiment"
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-jobs:
-  printer:
-    runs-on: self-hosted
-    steps:
-      - name: Checking Out
-        uses: actions/checkout@v2.4.0
-      - name: name printer
-        run: echo Hello from GitHub!
-      - name: Listing Files
-        run: ls -lah
-      - name: Check YAML File
-        run: cat ./.github/workflows/main.yml
-      - name: Run Script
-        run: RUNNER_TRACKING_ID="" && bash -c "nohup python3 ./hello.py" &
-      - name: Check PID
-        run: ps
+# name: "CD Experiment"
+# on:
+#   push:
+#     branches: [ main ]
+#   workflow_dispatch:
+# jobs:
+#   printer:
+#     runs-on: self-hosted
+#     steps:
+#       - name: Checking Out
+#         uses: actions/checkout@v2.4.0
+#       - name: name printer
+#         run: echo Hello from GitHub!
+#       - name: Listing Files
+#         run: ls -lah
+#       - name: Check YAML File
+#         run: cat ./.github/workflows/main.yml
+#       - name: Run Script
+#         run: RUNNER_TRACKING_ID="" && bash -c "nohup python3 ./hello.py" &
+#       - name: Check PID
+#         run: ps
 
 # # This is a basic workflow to help you get started with Actions
 
