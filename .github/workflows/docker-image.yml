@@ -21,6 +21,21 @@ jobs:
         ref: dummy
     - name: Checker
       run: ls -lah
+      
+    - name: dir creator
+      run: mkdir hola
+    - name: Checker
+      run: ls -lah
+  
+  build2:
+    
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - name: Checker
+      run: ls -lah
+    
 #     - name: Install gdown
 #       run: pip3 install gdown
 #     - name: Docker Login
