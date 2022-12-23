@@ -26,6 +26,8 @@ jobs:
       run: mkdir hola
     - name: Checker
       run: ls -lah
+    - name: wget checker
+      run: wget -h
   
   build2:
     
