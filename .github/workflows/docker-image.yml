@@ -40,13 +40,13 @@ jobs:
       run: docker pull codeadeel/stream_classification:video_client_browser
     
     - name: Rename Image
-      run: docker tag codeadeel/stream_classification:video_client_browser ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/streamclassification/stream_classification:video_client_browser
+      run: docker tag codeadeel/stream_classification:video_client_browser gcr.io/${{ env.PROJECT_ID }}/stream_classification:video_client_browser
     
     - name: Check available images
       run: docker images
     
     - name: Push image
-      run: docker push ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/streamclassification/stream_classification:video_client_browser
+      run: docker push gcr.io/${{ env.PROJECT_ID }}/stream_classification:video_client_browser
 
 
     
