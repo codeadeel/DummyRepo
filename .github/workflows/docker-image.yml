@@ -38,10 +38,8 @@ jobs:
       run: chmod 600 ./tempKey
     
     - name: Testing SSH
-      shell: bash
-      run: |
-        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} << EOF
-          echo "Connected successfully"
-          echo $(pwd)
-          echo $(ls -lah)
-        EOF
+      run: ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} pwd
+    
+    - name: Testing SSH
+      run: ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} ls -lah
+      
