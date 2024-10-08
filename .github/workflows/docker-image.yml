@@ -35,7 +35,6 @@ jobs:
       shell: bash
       run: |
         echo ${{ secrets.FNIRSGCPKEY }} >> ./tempKey
-        chmod 600 ./tempKey
         ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }}
         echo $(pwd)
         echo $(ls -lah)
