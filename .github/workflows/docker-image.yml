@@ -31,9 +31,8 @@ jobs:
         done
         echo "ping success"
     
-    - name: checking ssh
+    - name: checking ls
       shell: bash
       run: |
-        ssh --help
-        pwd
-        ls
+        echo $(ls -lah)
+        echo $(pwd)
