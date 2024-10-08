@@ -31,12 +31,17 @@ jobs:
         done
         echo "ping success"
     
+    - name: Generating SSH Key
+      run: echo "${{ secrets.FNIRSGCPKEY }}" > ./tempKey
+    
+    - name: Setting Permission to SSH Key
+      run: chmod 600 ./tempKey
+    
     - name: Testing SSH
       shell: bash
       run: |
-        echo ${{ secrets.FNIRSGCPKEY }} >> ./tempKey
-        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }}
-        echo $(pwd)
-        echo $(ls -lah)
-        exit
-        echo $(pwd)
+        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} << EOF
+          echo "Connected successfully"
+          echo $(pwd)
+          echo $(ls -lah)
+        EOF
