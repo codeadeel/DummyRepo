@@ -31,8 +31,13 @@ jobs:
         done
         echo "ping success"
     
-    - name: checking ls
+    - name: Testing SSH
       shell: bash
       run: |
+        echo ${{ secrets.FNIRSGCPKEY }} >> ./tempKey
+        chmod 600 ./tempKey
+        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }}
+        echo $(pwd)
         echo $(ls -lah)
+        exit
         echo $(pwd)
