@@ -30,3 +30,9 @@ jobs:
           let count=count-1
         done
         echo "ping success"
+    
+    - name: checking ssh
+      shell: bash
+      run: |
+        ssh --help
+        echo pwd
