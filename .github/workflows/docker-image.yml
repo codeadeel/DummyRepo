@@ -40,7 +40,6 @@ jobs:
     - name: Testing SSH
       shell: bash
       run: |
-        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }}
-        echo $(pwd)
-        echo $(ls -lah)
+        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} sudo pwd
+        ssh -o "StrictHostKeyChecking no" -i ./tempKey ${{ secrets.FNIRSGCPUSER }}@${{ secrets.FNIRSGCPHOST }} sudo ls -lah
         
