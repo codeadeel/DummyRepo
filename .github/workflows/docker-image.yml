@@ -37,6 +37,12 @@ jobs:
     - name: Setting Permission to SSH Key
       run: chmod 600 ./tempKey
     
+    - name: Checking pwd
+      run: pwd
+
+    - name: Checking ls
+      run:  ls -lah
+      
     - name: Testing SSH
       shell: bash
       run: |
